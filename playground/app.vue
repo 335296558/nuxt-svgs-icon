@@ -1,7 +1,7 @@
 <template>
   <div>
     Nuxt module playground!
-    <svgIcon
+    <NuxtSvgIcon
       name="logo"
       color="#f00"
       size="200"

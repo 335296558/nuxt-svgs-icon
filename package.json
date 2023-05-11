@@ -1,7 +1,7 @@
 {
     "name": "@nuxtjs/svgicon",
     "version": "1.0.0",
-    "description": "svgIcon for Nuxt",
+    "description": "NuxtSvgIcon for Nuxt",
     "repository": "your-org/my-module",
     "license": "MIT",
     "type": "module",
@@ -30,18 +30,18 @@
         "test:watch": "vitest watch"
     },
     "dependencies": {
-        "@nuxt/kit": "^3.4.3",
+        "@nuxt/kit": "^3.4.1",
+        "nuxt": "^3.4.1",
         "vite-plugin-vue-svg-icons": "^3.0.22"
     },
     "devDependencies": {
         "@nuxt/eslint-config": "^0.1.1",
         "@nuxt/module-builder": "^0.3.0",
-        "@nuxt/schema": "^3.4.3",
-        "@nuxt/test-utils": "^3.4.3",
+        "@nuxt/schema": "^3.4.1",
+        "@nuxt/test-utils": "^3.4.1",
         "@types/node": "^18",
         "changelogen": "^0.5.3",
         "eslint": "^8.39.0",
-        "nuxt": "^3.4.3",
         "vitest": "^0.30.1"
     }
 }

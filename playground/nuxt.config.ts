@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   modules: [
-    '../../svgicon'
+    '../../nuxt-svgicon'
   ],
   lintOnSave: false,
 })

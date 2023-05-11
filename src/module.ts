@@ -7,10 +7,10 @@ export interface ModuleOptions {}
 export default defineNuxtModule<ModuleOptions>({
     meta: {
         name: '@nuxtjs/svgicon',
-        configKey: 'svg-icon',
+        configKey: 'SvgIcon',
         compatibility: {
             // Semver version of supported nuxt versions
-            nuxt: '^3.4.3'
+            nuxt: '^3.4.1'
         }
     },
     // Default configuration options of the Nuxt module
@@ -27,7 +27,8 @@ export default defineNuxtModule<ModuleOptions>({
         console.log(resolver.resolve('./runtime/plugins/setComponent.client.ts'), 'BBBB')
         addServerPlugin(resolver.resolve('./runtime/server/injectionHtml'));
         addVitePlugin(vitePluginVueSvgIcons());
-        addPlugin(resolver.resolve('./runtime/plugins/setComponent.client'))
+        addPlugin(resolver.resolve('./runtime/plugins/setComponent.client'));
+        nuxt.options.build.transpile.push('@nuxtjs/svgicon')
         // addServerPlugin(resolver.resolve(runtimeDir, 'server', 'injectionHtml'));
         // addVitePlugin(vitePluginVueSvgIcons());
         // addPlugin(resolver.resolve(runtimeDir, 'plugins', 'setComponent.client'))

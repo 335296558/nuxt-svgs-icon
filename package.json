@@ -2,7 +2,10 @@
     "name": "@nuxtjs/svgicon",
     "version": "1.0.0",
     "description": "NuxtSvgIcon for Nuxt",
-    "repository": "your-org/my-module",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/335296558/nuxt-svg-icon.git"
+    },
     "license": "MIT",
     "type": "module",
     "exports": {

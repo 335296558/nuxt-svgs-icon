@@ -89,7 +89,8 @@ export default defineNuxtConfig({
 
 
 #### version description：
-    v1.0.0
+    v1.0.1 Fix invalid options configuration
+    v1.0.0 It can be used normally, but the options configuration is invalid. Known problem: options configuration is invalid
 
 ```
 ☺️ 🤪😋😘 If there are any deficiencies, please advise, I am on the way of learning...

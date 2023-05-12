@@ -30,7 +30,10 @@
         "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
         "lint": "eslint .",
         "test": "vitest run",
-        "test:watch": "vitest watch"
+        "test:watch": "vitest watch",
+        "deploy": "npm publish --registry=https://registry.npmjs.org/",
+        "remove": "npm unpublish --registry https://registry.npmjs.org/ @nuxtjs/svgicon@请输入你的版本号",
+        "deprecate": "npm deprecate @nuxtjs/svgicon@'< 0.0.0' 'bug'"
     },
     "dependencies": {
         "@nuxt/kit": "^3.4.1",

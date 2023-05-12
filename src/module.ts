@@ -20,9 +20,9 @@ export default defineNuxtModule<ModuleOptions>({
         const rootDir = nuxt.options.rootDir;
         const svgIconsConfig: any = {
             dir: options.dir || path.resolve(rootDir, 'assets', 'svg'),
-            moduleId: 'nuxt-svg-icon',
-            svgId: 'nuxt__v__svg__icons',
-            iconPrefix: 'ei',
+            moduleId: options.moduleId || 'nuxt-svg-icon',
+            svgId: options.svgId || 'nuxt__v__svg__icons',
+            iconPrefix: options.iconPrefix || 'ei',
             rootDir
         }
         nuxt.options.appConfig.svgIconsConfig = svgIconsConfig;

@@ -22,7 +22,7 @@
         "dist"
     ],
     "scripts": {
-        "build": "npm run lint && npm run test && npm run dev:prepare && npm run prepack",
+        "build": "npm run dev:prepare && npm run dev:build && npm run lint && npm run prepack",
         "prepack": "nuxt-module-build",
         "dev": "nuxi dev playground",
         "dev:build": "nuxi build playground",
@@ -38,7 +38,7 @@
     "dependencies": {
         "@nuxt/kit": "^3.4.1",
         "nuxt": "^3.4.1",
-        "vite-plugin-vue-svg-icons": "^3.0.22"
+        "vite-plugin-vue-svg-icons": "^3.1.0"
     },
     "devDependencies": {
         "@nuxt/eslint-config": "^0.1.1",

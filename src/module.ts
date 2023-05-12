@@ -21,7 +21,7 @@ export default defineNuxtModule<ModuleOptions>({
             dir: options.dir || path.resolve(rootDir, 'assets', 'svg'),
             moduleId: 'nuxt-svg-icon',
             svgId: 'nuxt__v__svg__icons',
-            iconPrefix: 'ei-nuxt',
+            iconPrefix: 'ei',
             rootDir
         }
         nuxt.options.appConfig.svgIconsConfig = svgIconsConfig;

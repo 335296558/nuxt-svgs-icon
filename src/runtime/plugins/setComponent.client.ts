@@ -1,7 +1,7 @@
 import { defineNuxtPlugin } from '#app';
-import svgIcon from 'svg-icon';
+import NuxtSvgIcon from 'nuxt-svg-icon';
 export default defineNuxtPlugin((NuxtApp) => {
   const { vueApp } = NuxtApp
-  vueApp.component('NuxtSvgIcon', svgIcon);
+  vueApp.component('NuxtSvgIcon', NuxtSvgIcon);
 })
 

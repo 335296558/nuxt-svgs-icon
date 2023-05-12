@@ -83,6 +83,8 @@ export default defineNuxtConfig({
     v1.0.1 修复options 配置无效问题
     v1.0.0 已知问题：options 配置无效
 
+    nuxt >= ^3.4.1
+
 ```
 ☺️ 🤪😋😘 若有不足，请指教，我在学习的路上...
 ```

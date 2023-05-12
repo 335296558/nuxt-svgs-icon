@@ -6,7 +6,8 @@ const resolver = createResolver(import.meta.url);
 export interface ModuleOptions {}
 export default defineNuxtModule<ModuleOptions>({
     meta: {
-        name: '@nuxtjs/svgicon',
+        // name 与 configKey 是不相同的
+        name: 'nuxt-svgs-icon',
         configKey: 'NuxtSvgIcon',
         compatibility: {
             // Semver version of supported nuxt versions

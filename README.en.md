@@ -2,17 +2,17 @@
 Get your module up and running quickly.
 
 Find and replace all on all files (CMD+SHIFT+F):
-- Name: @nuxtjs/svgicon
-- Package name: @nuxtjs/svgicon
+- Name: nuxt-svgs-icon
+- Package name: nuxt-svgs-icon
 - Description: Nuxt3 svg icon
 -->
 
-# @nuxtjs/svgicon
+# nuxt-svgs-icon
 
 [中文文档](README.md)
 
 The module is based on [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons), because Nuxt3 does not support <img src="https://vitejs.dev/logo.svg" width="18px"></img>vite's transformIndexHtml, using [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons) in Nuxt3 still needs to do some processing, trouble!
-In order to use this plugin more conveniently in Nuxt3, there is @nuxtjs/svgicon 😂
+In order to use this plugin more conveniently in Nuxt3, there is nuxt-svgs-icon 😂
 
 
 <img src="./playground/assets/demo.gif" width="400px"></img> 
@@ -26,27 +26,27 @@ In order to use this plugin more conveniently in Nuxt3, there is @nuxtjs/svgicon
 
 ## Quick Setup
 
-1. Add `@nuxtjs/svgicon` dependency to your project
+1. Add `nuxt-svgs-icon` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D @nuxtjs/svgicon
+pnpm add -D nuxt-svgs-icon
 
 # Using yarn
-yarn add --dev @nuxtjs/svgicon
+yarn add --dev nuxt-svgs-icon
 
 # Using npm
-npm install --save-dev @nuxtjs/svgicon
+npm install --save-dev nuxt-svgs-icon
 ```
 
-2. Add `@nuxtjs/svgicon` to the `modules` section of `nuxt.config.ts`
+2. Add `nuxt-svgs-icon` to the `modules` section of `nuxt.config.ts`
 
 ```js
 // DOME1
 export default defineNuxtConfig({
   modules: [
     // default
-    '@nuxtjs/svgicon'
+    'nuxt-svgs-icon'
   ]
 })
 
@@ -54,7 +54,7 @@ export default defineNuxtConfig({
 export default defineNuxtConfig({
   modules: [
     // Configurable
-    ['@nuxtjs/svgicon',{
+    ['nuxt-svgs-icon',{
        // options
     }]
   ]

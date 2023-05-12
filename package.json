@@ -1,10 +1,10 @@
 {
-    "name": "@nuxtjs/svgicon",
+    "name": "nuxt-svgs-icon",
     "version": "1.0.0",
     "description": "NuxtSvgIcon for Nuxt",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/335296558/nuxt-svg-icon.git"
+        "url": "git+https://github.com/335296558/nuxt-svgs-icon.git"
     },
     "license": "MIT",
     "type": "module",
@@ -32,8 +32,8 @@
         "test": "vitest run",
         "test:watch": "vitest watch",
         "deploy": "npm publish --registry=https://registry.npmjs.org/",
-        "remove": "npm unpublish --registry https://registry.npmjs.org/ @nuxtjs/svgicon@请输入你的版本号",
-        "deprecate": "npm deprecate @nuxtjs/svgicon@'< 0.0.0' 'bug'"
+        "remove": "npm unpublish --registry https://registry.npmjs.org/ nuxt-svgs-icon@请输入你的版本号",
+        "deprecate": "npm deprecate nuxt-svgs-icon@'< 0.0.0' 'bug'"
     },
     "dependencies": {
         "@nuxt/kit": "^3.4.1",

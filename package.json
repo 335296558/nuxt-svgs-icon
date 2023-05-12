@@ -19,7 +19,7 @@
         "dist"
     ],
     "scripts": {
-        "build": "npm run lint && npm run test && npm run prepack",
+        "build": "npm run lint && npm run test && npm run dev:prepare && npm run prepack",
         "prepack": "nuxt-module-build",
         "dev": "nuxi dev playground",
         "dev:build": "nuxi build playground",

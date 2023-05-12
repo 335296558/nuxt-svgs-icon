@@ -10,5 +10,5 @@
 </template>
 
 <script setup>
-// import svgIcon from 'svg-icon';
+import NuxtSvgIcon from 'svg-icon';
 </script>

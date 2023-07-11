@@ -14,7 +14,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 模块基于 [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons)，因为Nuxt3 不支持vite<img src="https://vitejs.dev/logo.svg" width="18px"></img>的transformIndexHtml，在Nuxt3中用 [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons) 还需要做一些处理，麻烦！
 为了更方便在Nuxt3中便用该插件，于是有了 nuxt-svgs-icon 😂
 
-<img src="./playground/assets/demo.gif" width="400px"></img> 
+<img src="./playground/assets/demo_git_svgo.gif" width="400px"></img> 
 
 
 
@@ -80,11 +80,12 @@ export default defineNuxtConfig({
 |color|String| inherit，请设置上你理想的color, 仅支持单色svg|
 |size|Number|默认20, 设置为false, 无默认值，svg也不会被设置上大小|
 #### 版本描述：
-    v1.0.1 修复options 配置无效问题
-    v1.0.0 已知问题：options 配置无效
+    v1.0.2 修复生产问题
+    v1.0.1 修复options 配置无效问题 BUG!
+    v1.0.0 已知问题：options 配置无效 BUG!
 
     nuxt >= ^3.4.1
 
 ```
-☺️ 🤪😋😘 若有不足，请指教，我在学习的路上...
+☺️ 🤪😋😘
 ```

@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   modules: [
-    ['../../nuxt-svgs-icon']
+    // ['../dist/module.mjs']
+    ['../dist/module.mjs']
   ],
-  lintOnSave: false,
+//   lintOnSave: false,
 })

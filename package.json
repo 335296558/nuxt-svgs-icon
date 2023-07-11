@@ -1,6 +1,6 @@
 {
     "name": "nuxt-svgs-icon",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "NuxtSvgIcon for Nuxt",
     "repository": {
         "type": "git",
@@ -37,8 +37,7 @@
     },
     "dependencies": {
         "@nuxt/kit": "^3.4.1",
-        "nuxt": "^3.4.1",
-        "vite-plugin-vue-svg-icons": "^3.1.0"
+        "nuxt": "^3.4.1"
     },
     "devDependencies": {
         "@nuxt/eslint-config": "^0.1.1",
@@ -48,6 +47,7 @@
         "@types/node": "^18",
         "changelogen": "^0.5.3",
         "eslint": "^8.39.0",
+        "vite-plugin-vue-svg-icons": "^3.1.2",
         "vitest": "^0.30.1"
     }
 }

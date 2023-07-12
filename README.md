@@ -12,7 +12,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 [English documentation](README.en.md) 
 
 模块基于 [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons)，因为Nuxt3 不支持vite<img src="https://vitejs.dev/logo.svg" width="18px"></img>的transformIndexHtml，在Nuxt3中用 [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons) 还需要做一些处理，麻烦！
-为了更方便在Nuxt3中便用该插件，于是有了 nuxt-svgs-icon 😂
+为了更方便在Nuxt3中便用该插件，应该插件仅支持Nuxt3
 
 <img src="./playground/assets/demo_git_svgo.gif" width="400px"></img> 
 

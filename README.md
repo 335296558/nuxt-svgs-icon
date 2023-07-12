@@ -11,7 +11,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 
 [English documentation](README.en.md) 
 
-模块基于 [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons)，因为Nuxt3 不支持vite<img src="https://vitejs.dev/logo.svg" width="18px"></img>的transformIndexHtml，在Nuxt3中用 [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons) 还需要做一些处理，麻烦！
+模块基于 [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons)封装，因为Nuxt3 不支持vite<img src="https://vitejs.dev/logo.svg" width="18px"></img>的transformIndexHtml，在Nuxt3中用 [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons) 还需要做一些处理，麻烦！
 为了更方便在Nuxt3中便用该插件，应该插件仅支持Nuxt3
 
 <img src="./playground/assets/demo_git_svgo.gif" width="400px"></img> 
@@ -29,13 +29,10 @@ Find and replace all on all files (CMD+SHIFT+F):
 
 ```bash
 # Using pnpm
-pnpm add nuxt-svgs-icon -D
-
-# Using yarn
-yarn add nuxt-svgs-icon
+pnpm add nuxt-svgs-icon vite-plugin-vue-svg-icons -D
 
 # Using npm
-npm install nuxt-svgs-icon --save-dev
+npm install nuxt-svgs-icon vite-plugin-vue-svg-icons --save-dev
 ```
 
 2. Add `nuxt-svgs-icon` to the `modules` section of `nuxt.config.ts`

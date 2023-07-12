@@ -1,6 +1,6 @@
 {
     "name": "nuxt-svgs-icon",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "NuxtSvgIcon for Nuxt",
     "repository": {
         "type": "git",
@@ -31,7 +31,6 @@
         "lint": "eslint .",
         "test": "vitest run",
         "test:watch": "vitest watch",
-        "postinstall": "node install-plugin.js",
         "deploy": "npm publish --registry=https://registry.npmjs.org/",
         "remove": "npm unpublish --registry https://registry.npmjs.org/ nuxt-svgs-icon@请输入你的版本号",
         "deprecate": "npm deprecate nuxt-svgs-icon@'< 1.0.6' 'critical bug fixed in v1.0.6'"

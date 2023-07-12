@@ -34,7 +34,7 @@
         "postinstall": "node install-plugin.js",
         "deploy": "npm publish --registry=https://registry.npmjs.org/",
         "remove": "npm unpublish --registry https://registry.npmjs.org/ nuxt-svgs-icon@请输入你的版本号",
-        "deprecate": "npm deprecate nuxt-svgs-icon@'< 1.0.3' 'critical bug fixed in v1.0.3'"
+        "deprecate": "npm deprecate nuxt-svgs-icon@'< 1.0.6' 'critical bug fixed in v1.0.6'"
     },
     "dependencies": {
         "@nuxt/kit": "^3.4.1",

@@ -30,13 +30,13 @@ In order to use this plugin more conveniently in Nuxt3, there is nuxt-svgs-icon 
 
 ```bash
 # Using pnpm
-pnpm add -D nuxt-svgs-icon
+pnpm add nuxt-svgs-icon -D
 
 # Using yarn
-yarn add --dev nuxt-svgs-icon
+yarn add nuxt-svgs-icon
 
 # Using npm
-npm install --save-dev nuxt-svgs-icon
+npm install nuxt-svgs-icon --save-dev
 ```
 
 2. Add `nuxt-svgs-icon` to the `modules` section of `nuxt.config.ts`
@@ -89,10 +89,8 @@ export default defineNuxtConfig({
 
 
 #### version description：
-    v1.0.1 Fix invalid options configuration
-    v1.0.0 It can be used normally, but the options configuration is invalid. Known problem: options configuration is invalid
-
+    >=v1.0.5
     nuxt >= ^3.4.1
 ```
-☺️ 🤪😋😘 If there are any deficiencies, please advise, I am on the way of learning...
+☺️ 🤪😋😘
 ```

@@ -29,13 +29,13 @@ Find and replace all on all files (CMD+SHIFT+F):
 
 ```bash
 # Using pnpm
-pnpm add -D nuxt-svgs-icon
+pnpm add nuxt-svgs-icon -D
 
 # Using yarn
-yarn add --dev nuxt-svgs-icon
+yarn add nuxt-svgs-icon
 
 # Using npm
-npm install --save-dev nuxt-svgs-icon
+npm install nuxt-svgs-icon --save-dev
 ```
 
 2. Add `nuxt-svgs-icon` to the `modules` section of `nuxt.config.ts`
@@ -80,7 +80,7 @@ export default defineNuxtConfig({
 |color|String| inherit，请设置上你理想的color, 仅支持单色svg|
 |size|Number|默认20, 设置为false, 无默认值，svg也不会被设置上大小|
 #### 版本描述：
-    v1.0.3 修复生产问题
+    >=v1.0.5
 
     nuxt >= ^3.4.1
 

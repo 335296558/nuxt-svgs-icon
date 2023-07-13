@@ -11,8 +11,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 
 [中文文档](README.md)
 
-The module is based on [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons), because Nuxt3 does not support <img src="https://vitejs.dev/logo.svg" width="18px"></img>vite's transformIndexHtml, using [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons) in Nuxt3 still needs to do some processing, trouble!
-In order to use this plugin more conveniently in Nuxt3, there is nuxt-svgs-icon 😂
+Because Nuxt3 does not support transformIndexHtml of vite <img src="https://vitejs.dev/logo.svg" width="18px"></img>, nuxt-svgs-icon is based on [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons) module package, this plugin only supports Nuxt3
 
 
 <img src="./playground/assets/demo.gif" width="400px"></img> 

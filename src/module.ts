@@ -2,7 +2,6 @@ import { defineNuxtModule, addVitePlugin, createResolver, addServerPlugin } from
 import vitePluginVueSvgIcons from 'vite-plugin-vue-svg-icons';
 import path from 'path';
 import copy from 'rollup-plugin-copy';
-// import { defu } from 'defu';
 const resolver = createResolver(import.meta.url);
 // Module options TypeScript interface definition
 export interface SvgIconsConfig {

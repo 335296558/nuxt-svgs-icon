@@ -33,7 +33,7 @@
         "test:watch": "vitest watch",
         "deploy": "npm publish --registry=https://registry.npmjs.org/",
         "remove": "npm unpublish --registry https://registry.npmjs.org/ nuxt-svgs-icon@请输入你的版本号",
-        "deprecate": "npm deprecate nuxt-svgs-icon@'< 1.0.9' 'critical bug fixed in v1.0.9'"
+        "deprecate": "npm deprecate nuxt-svgs-icon@'< 1.1.0' 'critical bug fixed in v1.1.0'"
     },
     "dependencies": {
         "@nuxt/kit": "^3.4.1",

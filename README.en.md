@@ -88,7 +88,7 @@ export default defineNuxtConfig({
 
 
 #### version description：
-    >=v1.0.5
+    >=v1.1.0
     nuxt >= ^3.4.1
 ```
 ☺️ 🤪😋😘

@@ -76,7 +76,7 @@ export default defineNuxtConfig({
 |color|String| inherit，请设置上你理想的color, 仅支持单色svg|
 |size|Number|默认20, 设置为false, 无默认值，svg也不会被设置上大小|
 #### 版本描述：
-    >=v1.0.9
+    >=v1.1.0
 
     nuxt >= ^3.4.1
 

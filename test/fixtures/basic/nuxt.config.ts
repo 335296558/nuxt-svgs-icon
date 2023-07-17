@@ -1,4 +1,4 @@
-import MyModule from '../../../src/module'
+import MyModule from '../../../dist/module';
 
 export default defineNuxtConfig({
   modules: [

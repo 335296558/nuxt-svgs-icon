@@ -1,8 +1,11 @@
-import { defineNuxtModule, addVitePlugin, createResolver, addServerPlugin } from '@nuxt/kit'
+import { defineNuxtModule, addVitePlugin, createResolver, addServerPlugin } from '@nuxt/kit';
 import vitePluginVueSvgIcons from 'vite-plugin-vue-svg-icons';
 import path from 'path';
+import { existsSync } from 'node:fs';
+export * from './types';
+import { svgsOptions } from './types';
 const resolver = createResolver(import.meta.url);
-// Module options TypeScript interface definition
+// 模块选项 TypeScript 接口定义
 export interface ModuleOptions {}
 export default defineNuxtModule<ModuleOptions>({
     meta: {
@@ -14,29 +17,29 @@ export default defineNuxtModule<ModuleOptions>({
             nuxt: '^3.4.1'
         }
     },
-    // Default configuration options of the Nuxt module
+    // Nuxt模块的默认配置选项
     defaults: {},
-    async setup (options: any, nuxt) {
+    async setup (options: Record<string, any>, nuxt) {
         const rootDir = nuxt.options.rootDir;
-        const svgIconsConfig: any = {
+        const nuxtSvgsIconConfig: svgsOptions = {
             dir: options.dir || path.resolve(rootDir, 'assets', 'svg'),
             moduleId: options.moduleId || 'nuxt-svg-icon',
             svgId: options.svgId || 'nuxt__v__svg__icons',
             iconPrefix: options.iconPrefix || 'ei',
             rootDir
         }
-        nuxt.options.appConfig.svgIconsConfig = svgIconsConfig;
+        nuxt.options.appConfig.nuxtSvgsIconConfig = nuxtSvgsIconConfig;
         const runtimeDir = resolver.resolve('runtime');
         nuxt.options.build.transpile.push(runtimeDir);
-        // console.log(resolver.resolve(runtimeDir, 'plugins', 'setComponent.client.ts'), 'AAAA')
-        // console.log(resolver.resolve(runtimeDir, 'plugins', 'setComponent.client.ts'), 'BBBB')
-        if (svgIconsConfig.dir && !path.isAbsolute(svgIconsConfig.dir)) {  // path不对就不生效
+        const dir = nuxtSvgsIconConfig.dir as string;
+        if (!path.isAbsolute(dir) || !existsSync(dir)) {  // path不对就不生效
             console.warn('error dir path Should be your svg directory! docs url:https://github.com/335296558/vite-plugin-vue-svg-icons')
             return
         }
+        const svgIconPlugin = await vitePluginVueSvgIcons(nuxtSvgsIconConfig);
+        const svgsHTMLString = await svgIconPlugin.transformIndexHtml('');
+        nuxt.options.appConfig.nuxtSvgsIconHTMLString = svgsHTMLString;
         addServerPlugin(resolver.resolve(runtimeDir, 'server', 'injectionHtml'));
-        addVitePlugin(vitePluginVueSvgIcons(svgIconsConfig));
-        // addPlugin(resolver.resolve(runtimeDir, 'plugins', 'setComponent.client'));
-        // nuxt.options.build.transpile.push('@nuxtjs/svgicon')
+        addVitePlugin(svgIconPlugin);
     }
 })

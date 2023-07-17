@@ -2,8 +2,7 @@ import path from 'path';
 import { existsSync } from 'node:fs';
 import { svgsOptions } from './types';
 import { addVitePlugin, addServerPlugin } from '@nuxt/kit';
-// import vitePluginVueSvgIcons from 'vite-plugin-vue-svg-icons';
-import vitePluginVueSvgIcons from '/Users/shuang/web/Plugin/vite-plugin-vue-svg-icons/package/dist/index';
+import vitePluginVueSvgIcons from 'vite-plugin-vue-svg-icons';
 
 export function getSvgIconsConfig(options: svgsOptions) {
     return {

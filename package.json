@@ -1,6 +1,6 @@
 {
     "name": "nuxt-svgs-icon",
-    "version": "1.0.9",
+    "version": "1.1.0",
     "description": "NuxtSvgIcon for Nuxt",
     "repository": {
         "type": "git",
@@ -10,7 +10,7 @@
     "type": "module",
     "exports": {
         ".": {
-            "types": "./dist/types.d.ts",
+            "types": "./dist/module.d.ts",
             "import": "./dist/module.mjs",
             "require": "./dist/module.cjs"
         },

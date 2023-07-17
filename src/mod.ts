@@ -1,18 +1,9 @@
 import path from 'path';
+import { svgsOptions } from './types';
 import { addVitePlugin, addServerPlugin } from '@nuxt/kit';
 import vitePluginVueSvgIcons from 'vite-plugin-vue-svg-icons';
 
-export interface SvgIconsConfigTypes {
-    dir?: string; // svg目录path
-    buildDir?: string; // build 后输出的目录path
-    moduleId?: string;
-    svgId?: string;
-    iconPrefix?: string;
-    rootDir: string;
-    debug?: boolean;
-}
-
-export function getSvgIconsConfig(options: SvgIconsConfigTypes) {
+export function getSvgIconsConfig(options: svgsOptions) {
     return {
         dir: options.dir || path.resolve(options.rootDir, 'assets', 'svg'),
         buildDir: options.buildDir,
@@ -23,7 +14,7 @@ export function getSvgIconsConfig(options: SvgIconsConfigTypes) {
     }
 }
 
-export function setPlugin(nuxt: any, svgIconsConfig: SvgIconsConfigTypes, runtimeDir: string, injectionHtmlPlugin: string) {
+export function setPlugin(nuxt: any, svgIconsConfig: svgsOptions, runtimeDir: string, injectionHtmlPlugin: string) {
     nuxt.options.appConfig.svgIconsConfig = svgIconsConfig;
     nuxt.options.build.transpile.push(runtimeDir);
     if (svgIconsConfig.dir && !path.isAbsolute(svgIconsConfig.dir)) {  // path不对就不生效

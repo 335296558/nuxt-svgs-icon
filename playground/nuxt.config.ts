@@ -1,12 +1,11 @@
 export default defineNuxtConfig({
     modules: [
-        // ['../dist/module.mjs']
         ['../dist/module.mjs']
     ],
-    // nitro: {
-    //     output:{
-    //         dir: './dist'
-    //     }
-    // }
+    app:{
+        head: {
+            title: 'goodtogo｜小马外卖官网',
+        }
+    },
 //   lintOnSave: false,
 })

@@ -1,8 +1,9 @@
-import fs from 'fs-extra';
+import fsExtra from 'fs-extra';
+import { existsSync } from 'node:fs';
 import path from 'path';
 import { defineNuxtModule, createResolver } from '@nuxt/kit';
-// import copy from 'rollup-plugin-copy';
 import { getSvgIconsConfig, setPlugin } from './mod';
+// import copy from 'rollup-plugin-copy';
 // import type { svgsOptions } from './types';
 // Module options TypeScript interface definition
 export * from './types';
@@ -36,7 +37,10 @@ export default defineNuxtModule<ModuleOptions>({
                     const output = nitro.options.output;
                     svgIconsConfig.buildDir = path.resolve(output.publicDir, 'svg');
                     options.debug && console.log('svgIconsConfig=>', svgIconsConfig);
-                    fs.copySync(svgIconsConfig.dir, svgIconsConfig.buildDir);
+                    const orDir = svgIconsConfig.dir;
+                    if (path.isAbsolute(orDir) && existsSync(orDir)) {
+                        fsExtra.copySync(orDir, svgIconsConfig.buildDir);
+                    }
                 }
             }
         }

@@ -49,5 +49,9 @@
         "changelogen": "^0.5.3",
         "eslint": "^8.39.0",
         "vitest": "^0.30.1"
-    }
+    },
+    "keywords": [
+        "vite-plugin-vue-svg-icons",
+        "nuxt-svgs-icon"
+    ]
 }

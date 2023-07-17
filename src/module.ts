@@ -24,26 +24,14 @@ export default defineNuxtModule<ModuleOptions>({
     async setup (options: any, nuxt: any) {
         const dev = nuxt.options.dev; // dev = true 开发环境
         const envMode = nuxt.options.vite.mode; // 环境变量
-        options.debug && console.log('dev=>', dev, 'envMode=>', envMode);
+        options.debug = true;
+        options.debug && console.log('dev:', dev, 'NODE_ENV:', envMode);
         const rootDir = nuxt.options.rootDir; // 项目根目录的path
         const svgIconsConfig = getSvgIconsConfig({
             ...options,
             rootDir,
             buildDir: rootDir
-        })
-        if (!dev) {
-            nuxt.options.nitro.hooks = {
-                compiled(nitro: any) {
-                    const output = nitro.options.output;
-                    svgIconsConfig.buildDir = path.resolve(output.publicDir, 'svg');
-                    options.debug && console.log('svgIconsConfig=>', svgIconsConfig);
-                    const orDir = svgIconsConfig.dir;
-                    if (path.isAbsolute(orDir) && existsSync(orDir)) {
-                        fsExtra.copySync(orDir, svgIconsConfig.buildDir);
-                    }
-                }
-            }
-        }
+        });
         const runtimeDir = resolver.resolve('runtime');
         const injectionHtmlPlugin = resolver.resolve(runtimeDir, 'server', 'injectionHtml');
         setPlugin(nuxt, svgIconsConfig, runtimeDir, injectionHtmlPlugin);

@@ -2,7 +2,8 @@ import path from 'path';
 import { existsSync } from 'node:fs';
 import { svgsOptions } from './types';
 import { addVitePlugin, addServerPlugin } from '@nuxt/kit';
-import vitePluginVueSvgIcons from 'vite-plugin-vue-svg-icons';
+// import vitePluginVueSvgIcons from 'vite-plugin-vue-svg-icons';
+import vitePluginVueSvgIcons from '/Users/shuang/web/Plugin/vite-plugin-vue-svg-icons/package/dist/index';
 
 export function getSvgIconsConfig(options: svgsOptions) {
     return {
@@ -15,7 +16,7 @@ export function getSvgIconsConfig(options: svgsOptions) {
     }
 }
 
-export function setPlugin(nuxt: any, svgIconsConfig: svgsOptions, runtimeDir: string, injectionHtmlPlugin: string) {
+export async function setPlugin(nuxt: any, svgIconsConfig: svgsOptions, runtimeDir: string, injectionHtmlPlugin: string) {
     nuxt.options.appConfig.svgIconsConfig = svgIconsConfig;
     nuxt.options.build.transpile.push(runtimeDir);
     const orDir = svgIconsConfig.dir as string;
@@ -25,6 +26,8 @@ export function setPlugin(nuxt: any, svgIconsConfig: svgsOptions, runtimeDir: st
         return
     }
     addServerPlugin(injectionHtmlPlugin);
-    addVitePlugin(vitePluginVueSvgIcons(svgIconsConfig));
+    const svgIconPlugin = await vitePluginVueSvgIcons(svgIconsConfig);
+    const svgsHTML = await svgIconPlugin.transformIndexHtml('');
+    nuxt.options.appConfig.svgIconsHTMLString = svgsHTML;
+    addVitePlugin(svgIconPlugin);
 }
-

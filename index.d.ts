@@ -1,5 +1,5 @@
-declare module "vite-plugin-vue-svg-icons";
-declare module 'nuxt-svg-icon' {
+declare module "vite-plugin-svgs-icons";
+declare module 'virtual:nuxt-svg-icon' {
     const content: any;
     export default content;
 }

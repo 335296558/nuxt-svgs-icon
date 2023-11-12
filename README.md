@@ -73,7 +73,7 @@ export default defineNuxtConfig({
 |size|String、Number、Array| size="28"、size="[10, 20]" |
 
 #### 版本描述：
-    >=v1.1.2 更新vite-plugin-svgs-icons, 支持更多svg， 多色修改
+    >=v1.0.2 更新vite-plugin-svgs-icons, 支持更多svg， 多色修改
 
     nuxt >= ^3.4.1
 ```

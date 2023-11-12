@@ -9,19 +9,13 @@ Find and replace all on all files (CMD+SHIFT+F):
 
 # nuxt-svgs-icon
 
-[中文文档](README.md)
+[English documentation](README.en.md) 
 
-Because Nuxt3 does not support transformIndexHtml of vite <img src="https://vitejs.dev/logo.svg" width="18px"></img>, nuxt-svgs-icon is based on [vite-plugin-vue-svg-icons](https://github.com/335296558/vite-plugin-vue-svg-icons) module package, this plugin only supports Nuxt3
+Because Nuxt3 does not support vite<img src="https://vitejs.dev/logo.svg" width="18px"></img>'s transformIndexHtml，So nuxt-svgs-icon is based on the [vite-plugin-svgs-icons](https://github.com/335296558/vite-plugin-svgs-icons) module package. This plug-in only supports Nuxt3
 
+##### For more about it, please move here [vite-plugin-svgs-icons](https://github.com/335296558/vite-plugin-svgs-icons)
 
-<img src="./playground/assets/demo.gif" width="400px"></img> 
-
-
-
-<!-- Highlight some of the features your module provide here -->
-
-- 🎃 &nbsp;A plugin that can modify color and size
-
+<img src="./playground/assets/testing_git_svgs.gif" width="400px"></img> 
 
 ## Quick Setup
 
@@ -31,9 +25,6 @@ Because Nuxt3 does not support transformIndexHtml of vite <img src="https://vite
 # Using pnpm
 pnpm add nuxt-svgs-icon -D
 
-# Using yarn
-yarn add nuxt-svgs-icon
-
 # Using npm
 npm install nuxt-svgs-icon --save-dev
 ```
@@ -41,21 +32,15 @@ npm install nuxt-svgs-icon --save-dev
 2. Add `nuxt-svgs-icon` to the `modules` section of `nuxt.config.ts`
 
 ```js
-// DOME1
 export default defineNuxtConfig({
   modules: [
-    // default
     'nuxt-svgs-icon'
-  ]
-})
-
-// DOME2
-export default defineNuxtConfig({
-  modules: [
     // Configurable
+    /*
     ['nuxt-svgs-icon',{
        // options
     }]
+    */
   ]
 })
 ```
@@ -64,16 +49,17 @@ export default defineNuxtConfig({
 | param | type | description | default |
 | -------- | -------- | -------- | -------- |
 |dir|String|Directory to store svg icons|`${process.cwd()}/src/assets/svg`|
-|moduleId|String|define import name|nuxt-svg-icon|
+|ssr|Boolean|Rendering mode, this method is rarely used in other normal situations. If you do not need server-side rendering, you can actually use [vite-plugin-svgs-icons](https://github.com/335296558/vite-plugin-svgs-icons)|false|
 
-#### NuxtSvgIcon Component Instructions
+<!-- |moduleId|String|定义导入名称|nuxt-svg-icon| -->
+#### NuxtSvgIcon Component usage instructions
 ```js
-    // *.vue
+    // app.vue Local registration use
     <script setup>
         import NuxtSvgIcon from 'nuxt-svg-icon'
     </script>
-    // The name parameter is the name of the svg file, for example: svg/logo.svg
-    // Then you only need name="logo" to refer to this svg
+    // The name parameter is the svg file name, for example: svg/logo.svg
+    // Then you only need name="logo" to reference this svg
     <template>
         <NuxtSvgIcon name="logo" color="#f00" size="80" />
     </template>
@@ -82,13 +68,13 @@ export default defineNuxtConfig({
 #### NuxtSvgIcon Component parameter description
 | param | type | default |
 | -------- | -------- | -------- |
-|name|String|Necessary to set the name, the same as the file name, or does not display well.The name parameter is a SVG file name, such as: name="logo"|
-|color|String| inherit，Please set your ideal color, Support only monochrome SVG|
-|size|Number|default 20, The default value is set to false, SVG size will not be set|
+|name|String|The name must be set, which is the same as the file name, otherwise it will not be displayed. The name parameter is the name of the svg file, for example: svg/logo.svg. Then you only need name="logo" to reference this svg.|
+|color|String| This method of setting color only supports single color modification! [Multicolor modification and movement](MULTICOLOR.md)|
+|size|String、Number、Array| size="28"、size="[10, 20]" |
 
+#### Version description：
+    >=v1.1.2 更新vite-plugin-svgs-icons, 支持更多svg， 多色修改
 
-#### version description：
-    >=v1.1.0
     nuxt >= ^3.4.1
 ```
 ☺️ 🤪😋😘

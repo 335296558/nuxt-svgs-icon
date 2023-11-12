@@ -1,7 +1,9 @@
 <template>
-  <div>basic<NuxtSvgIcon name="logo" /></div>
+  <div>
+    basic<NuxtSvgIcon name="logo" />
+  </div>
 </template>
 
 <script setup>
-import NuxtSvgIcon from 'nuxt-svg-icon';
+import NuxtSvgIcon from 'virtual:nuxt-svg-icon';
 </script>

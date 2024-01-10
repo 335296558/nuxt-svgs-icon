@@ -1,6 +1,7 @@
 import { defineNuxtModule, addVitePlugin, createResolver, addServerPlugin } from '@nuxt/kit';
 // 注意、注意、注意：Nuxt Module 默认会优先调用.cjs，如果.cjs不存在就会调.js
 import vitePluginSvgsIcons from 'vite-plugin-svgs-icons';
+// import vitePluginSvgsIcons from '../../vite-plugin-svgs-icons/dist/index';
 import path from 'path';
 import { existsSync } from 'node:fs';
 const resolver = createResolver(import.meta.url);
@@ -13,7 +14,7 @@ export default defineNuxtModule<ModuleOptions>({
         configKey: 'NuxtSvgsIcon',
         compatibility: {
             // Semver version of supported nuxt versions
-            nuxt: '^3.8.1'
+            nuxt: '^3.9.1'
         }
     },
     // Nuxt模块的默认配置选项
@@ -21,7 +22,7 @@ export default defineNuxtModule<ModuleOptions>({
         dir: '',
         moduleId: 'virtual:nuxt-svg-icon',
         svgId: 'nuxt__v__svg__icons',
-        iconPrefix: 'nuxt-icona',
+        iconPrefix: 'icona',
         ssr: true,
         svgIconNames: false,
     },

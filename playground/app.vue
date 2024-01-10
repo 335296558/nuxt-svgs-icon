@@ -65,12 +65,13 @@
 
 <script setup>
 import { ref } from 'vue';
-import NuxtSvgIcon from 'virtual:nuxt-svg-icon';
-const svgIconNames = []
+import NuxtSvgIcon, { svgIconNames } from 'virtual:nuxt-svg-icon';
+// const svgIconNames = []
 // import NuxtSvgIcon from 'virtual:svg-icon';
 // import svgIcon, { svgIconNames } from 'virtual:svg-icon';
 const color = ref('#ff9c00');
 const size = ref(42);
+console.log(NuxtSvgIcon, )
 </script>
 
 <style scoped>

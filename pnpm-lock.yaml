@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^3.9.1
     version: 3.9.1(@types/node@20.10.8)(eslint@8.56.0)(rollup@3.29.4)(typescript@5.3.3)(vite@5.0.11)
   vite-plugin-svgs-icons:
-    specifier: ^1.0.6
-    version: 1.0.6(@types/node@20.10.8)(typescript@5.3.3)
+    specifier: ^1.0.7
+    version: 1.0.7(@types/node@20.10.8)(typescript@5.3.3)
   vitest:
     specifier: ^0.33.0
     version: 0.33.0
@@ -6898,8 +6898,8 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-svgs-icons@1.0.6(@types/node@20.10.8)(typescript@5.3.3):
-    resolution: {integrity: sha512-qFqcNxEK8hGxEtpNxlp3AmZarcaf/Pmr3nMQU2AwJAMikOa/fctIm6Oe7wD/GwFbEl4ku8Uf6feTvDRQesjxEw==}
+  /vite-plugin-svgs-icons@1.0.7(@types/node@20.10.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-YknhNBW60DZPaSKza59bT4ztc/hzPJ1eDUd4aJaIFoE3X7OI1MFLQW3tT35mHVmZdaCfEofdHS411kkeQ18yIA==}
     dependencies:
       '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.0.11)(vue@3.4.7)
       vite: 5.0.11(@types/node@20.10.8)

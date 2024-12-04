@@ -35,13 +35,13 @@
         "deprecate": "npm deprecate nuxt-svgs-icon@'< 1.1.0' 'critical bug fixed in v1.1.0'"
     },
     "dependencies": {
-        "@nuxt/kit": "^3.14.1592",
         "nuxt": "3.13.2",
         "vite-plugin-svgs-icons": "^1.0.10"
     },
     "devDependencies": {
         "@nuxt/devtools": "latest",
         "@nuxt/eslint-config": "^0.2.0",
+        "@nuxt/kit": "^3.14.1592",
         "@nuxt/module-builder": "^0.5.5",
         "@nuxt/schema": "^3.14.1592",
         "@nuxt/test-utils": "^3.14.4",

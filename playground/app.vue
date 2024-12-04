@@ -1,66 +1,116 @@
 <template>
-    <div>
-        <div style="text-align: center;">
-            <h1 :style="`color: ${color};`">DEMO</h1>
-            <div class="install">
-                <h4 style="color:rgb(253, 169, 169);display: flex;align-items: center;justify-content: center;">
-                    <span style="padding-right:15px;">vite-plugin-svgs-icons 文档 👉👉👉</span>
-                    <a href="https://github.com/335296558/vite-plugin-svgs-icons/blob/main/README.md" target="_blank">
-                        <NuxtSvgIcon name="github" size="30"></NuxtSvgIcon>
-                    </a>
-                </h4>
-            </div>
-            <div class="box">
-                <div class="title"><b>修改大小</b></div>
-                <br />
-                <label class="label" v-for="(k, i) in 8" :key="k+i">
-                    <span>{{ (i+1) * 12 }}px</span>
-                    <input type="radio" :value="(i+1) * 12" v-model="size" />
-                </label>
-            </div>
-            <div class="box">
-                <div class="title"><b>修改color</b></div>
-                <br />
-                <label class="label">
-                    <span style="color: #000000">黑色</span>
-                    <input type="radio" value="#000000" v-model="color" />
-                </label>
-                <label class="label">
-                    <span style="color: #ff9c00">黄色</span>
-                    <input type="radio" value="#ff9c00" v-model="color" />
-                </label>
-                <label class="label">
-                    <span style="color: #0739ff">蓝色</span>
-                    <input type="radio" value="#0739ff" v-model="color" />
-                </label>
-                <label class="label">
-                    <span style="color: #9707ff">紫色</span>
-                    <input type="radio" value="#9707ff" v-model="color" />
-                </label>
-            </div>
-            <h4 style="color:rgb(253, 169, 169);display: flex;align-items: center;justify-content: center;">
-                <span style="padding-right:15px;">Nuxt3用法👉👉👉</span>
-                <a href="https://github.com/335296558/nuxt-svg-icon" target="_blank">
-                    <NuxtSvgIcon name="github" size="30"></NuxtSvgIcon>
-                </a>
-            </h4>
+  <div>
+    <div style="text-align: center;">
+      <h1 :style="`color: ${color};`">
+        DEMO
+      </h1>
+      <div class="install">
+        <h4 style="color:rgb(253, 169, 169);display: flex;align-items: center;justify-content: center;">
+          <span style="padding-right:15px;">vite-plugin-svgs-icons 文档 👉👉👉</span>
+          <a
+            href="https://github.com/335296558/vite-plugin-svgs-icons/blob/main/README.md"
+            target="_blank"
+          >
+            <NuxtSvgIcon
+              name="github"
+              size="30"
+            />
+          </a>
+        </h4>
+      </div>
+      <div class="box">
+        <div class="title">
+          <b>修改大小</b>
         </div>
-        <div :style="`padding: 8px;color: ${color}; text-align: center;`">
-            在这个丰富多彩的世界，也许我们需要多点 Color!
+        <br>
+        <label
+          v-for="(k, i) in 8"
+          :key="k+i"
+          class="label"
+        >
+          <span>{{ (i+1) * 12 }}px</span>
+          <input
+            v-model="size"
+            type="radio"
+            :value="(i+1) * 12"
+          >
+        </label>
+      </div>
+      <div class="box">
+        <div class="title">
+          <b>修改color</b>
         </div>
-        <div class="svg-testing-icon-box">
-            <ul>
-                <li v-for="(name, i) in svgIconNames" :key="i"  style="padding: 8px">
-                    <NuxtSvgIcon
-                        :style="`width: ${size}px;height: ${size}px;--${name}-svg-color: ${color}`"
-                        :color="color"
-                        :name="name"
-                    ></NuxtSvgIcon>
-                </li>
-            </ul>
-        </div>
+        <br>
+        <label class="label">
+          <span style="color: #000000">黑色</span>
+          <input
+            v-model="color"
+            type="radio"
+            value="#000000"
+          >
+        </label>
+        <label class="label">
+          <span style="color: #ff9c00">黄色</span>
+          <input
+            v-model="color"
+            type="radio"
+            value="#ff9c00"
+          >
+        </label>
+        <label class="label">
+          <span style="color: #0739ff">蓝色</span>
+          <input
+            v-model="color"
+            type="radio"
+            value="#0739ff"
+          >
+        </label>
+        <label class="label">
+          <span style="color: #9707ff">紫色</span>
+          <input
+            v-model="color"
+            type="radio"
+            value="#9707ff"
+          >
+        </label>
+      </div>
+      <h4 style="color:rgb(253, 169, 169);display: flex;align-items: center;justify-content: center;">
+        <span style="padding-right:15px;">Nuxt3用法👉👉👉</span>
+        <a
+          href="https://github.com/335296558/nuxt-svg-icon"
+          target="_blank"
+        >
+          <NuxtSvgIcon
+            name="github"
+            size="30"
+          />
+        </a>
+      </h4>
     </div>
-    <NuxtSvgIcon name="logo" :color="color" :size="size"></NuxtSvgIcon>
+    <div :style="`padding: 8px;color: ${color}; text-align: center;`">
+      在这个丰富多彩的世界，也许我们需要多点 Color!
+    </div>
+    <div class="svg-testing-icon-box">
+      <ul>
+        <li
+          v-for="(name, i) in svgIconNames"
+          :key="i"
+          style="padding: 8px"
+        >
+          <NuxtSvgIcon
+            :style="`width: ${size}px;height: ${size}px;--${name}-svg-color: ${color}`"
+            :color="color"
+            :name="name"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+  <NuxtSvgIcon
+    name="logo"
+    :color="color"
+    :size="size"
+  />
 </template>
 
 <script setup>
